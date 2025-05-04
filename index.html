@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saleh's GF Application</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: url('pink bgg.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .application-container {
+            background: rgba(255, 192, 203, 0.7);
+            border-radius: 40px;
+            padding: 40px;
+            width: 400px;
+            text-align: center;
+            box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+            border: 3px solid rgba(255, 255, 255, 0.5);
+        }
+        .application-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-radial-gradient(
+                circle at center,
+                rgba(255, 255, 255, 0.1) 0,
+                rgba(255, 255, 255, 0.1) 10px,
+                transparent 10px,
+                transparent 20px
+            );
+            animation: flower-move 10s linear infinite;
+            opacity: 0.5;
+        }
+        @keyframes flower-move {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        h1 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .start-button {
+            background-color: white;
+            color: pink;
+            border: 3px solid pink;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .start-button .flower-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 20 Q70 40, 50 60 Q30 80, 50 100 Q70 80, 50 60 Q30 40, 50 20" fill="pink" stroke="hotpink" stroke-width="2"/></svg>') repeat;
+            background-size: 30px;
+            opacity: 0.3;
+            animation: flower-slide 5s linear infinite;
+        }
+        @keyframes flower-slide {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        .start-button:hover {
+            transform: scale(1.05);
+            background-color: pink;
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="application-container">
+        <h1>oo looks like sm1 wants salehh</h1>
+        <button class="start-button" onclick="window.location.href='application.html'">
+            <span class="flower-overlay"></span>
+            Start Application
+        </button>
+    </div>
+</body>
+</html>
